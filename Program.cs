@@ -17,11 +17,11 @@ namespace Diziler
             
             Random rnd = new Random();
 
-            sayilar[0] = rnd.Next(0, 5);
+            sayilar[0] = rnd.Next(0, 1000);
 
             for (int i = 1; i < sayilar.Length; i++)
             {
-                sayilar[i] = rnd.Next(0, 5);
+                sayilar[i] = rnd.Next(0, 1000);
                 for (int b = 0; b<i; b++)
                 {
                     if (sayilar[b]==sayilar[i])
@@ -31,8 +31,8 @@ namespace Diziler
                     }
                 }
             }
-           
-            
+
+            Array.Sort(sayilar);
             for (int i = 0; i < sayilar.Length; i++)
             {
                 Console.Write($"{ sayilar[i]}-");
